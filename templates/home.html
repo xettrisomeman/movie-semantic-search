@@ -27,6 +27,10 @@
     </style>
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- navbar!-->
+    {% include 'navbar.html' %}
+    <!--navbar!-->
+    
     {% if not error %}
     <div class="container">
       <form action="/search" method="POST">
