@@ -1,5 +1,5 @@
 {
-	"build":[{
+	"builds":[{
 		"src": "movie_app/api.py",
 		"use": "@vercel/python"
 	}],
