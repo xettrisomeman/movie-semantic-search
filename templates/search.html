@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+
+
+{% block content %}
+<div class="container">
+{% for data in response %}
+<div class="card" style="margin: 5px auto auto auto; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+  <div class="card-body">
+    <h5 class="card-title fs-2 text">{{data['metadata']['title']}}</h5>
+		<p class="card-text fs-5 text">{{data['metadata']['overview']}}</p>
+    <p class="card-text">Casts: {{",".join(data['metadata']['credits'].split(" ")[:5])}}</p>
+    <p class="card-text">Genre: {{','.join(data['metadata']['genres'].split('-'))}}</p>
+  </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock content %}
