@@ -1,5 +1,6 @@
 cohere==2.9.1
 fastapi==0.88.0
-pinecone_client
+pinecone_client==2.0.13
+jinja2
 python-dotenv==0.21.0
 uvicorn==0.20.0
