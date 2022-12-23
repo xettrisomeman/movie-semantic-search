@@ -1,8 +1,8 @@
 {
-	"build":{
+	"build":[{
 		"src": "movie_app/api.py",
 		"use": "@vercel/python"
-	},
+	}],
 	"routes":[
 		{
 			"src": "/(.*)",
