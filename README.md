@@ -5,7 +5,7 @@
 <em>Natural Language Code For Film</em>
 </p>
 <p align="center">
-<strong>Find movie in seconds</strong>
+<strong>Find movies in seconds</strong>
 </p>
 
 > Part of the project [Semantic Search AI Hackathon](https://lablab.ai/event/semantic-search-hackathon)
@@ -26,3 +26,14 @@
         ``PINECONE_API=<your_pinecone_key>``
        `` COHERE_API=<your_cohore_key>``
 - run ``python main.py``
+
+
+### How we made it
+Dataset: [Movies Daily Update Dataset](https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies)
+
+
+- The vector size is 4096(cohere-large). 
+- Only 10k of 700k data being used. 
+- No FineTuning!! No Preprocessing!!
+
+<img src="assets/image.png" alt="Making of the model" width = "800" height="400">
