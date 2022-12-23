@@ -1,0 +1,12 @@
+{
+	"build":{
+		"src": "movie_app/api.py",
+		"use": "@vercel/python"
+	},
+	"routers":[
+		{
+			"src": "/(.*)",
+			"dest": "movie_app/api.py"
+		}
+	]
+}
