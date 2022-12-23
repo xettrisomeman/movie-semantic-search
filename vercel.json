@@ -3,7 +3,7 @@
 		"src": "movie_app/api.py",
 		"use": "@vercel/python"
 	},
-	"routers":[
+	"routes":[
 		{
 			"src": "/(.*)",
 			"dest": "movie_app/api.py"
