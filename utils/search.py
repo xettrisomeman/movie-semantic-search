@@ -14,10 +14,10 @@ PINECONE_API = os.getenv("PINECONE_API")
 co = cohere.Client(COHERE_API)
 
 # init pinecone
-pinecone.init(PINECONE_API)
+pinecone.init(PINECONE_API, environment='us-west1-gcp')
 
 ## get pinecone index(Vector index)
-index_name = "cohere-pinecone-semanticsearch-movie"
+index_name = 'cohere-pinecone-semanticsearch-movie-index'
 index = pinecone.Index(index_name)
 
 
@@ -26,3 +26,4 @@ def movie_search(query: str):
     embed = co.embed(texts=[query], model="large").embeddings
     response = index.query(embed, top_k=5, include_metadata=True)["matches"]
     return response
+
